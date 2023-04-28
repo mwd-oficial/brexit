@@ -1,11 +1,10 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
 @font-face {
     font-family: 'fonteRedonda';
     src: url("junegull.ttf") format('truetype')
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
 
 
 * {
@@ -35,7 +34,7 @@ body {
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
-    font-family: 'Caveat', cursive;
+    font-family: 'Kalam', cursive;
     overflow-x: hidden;
 }
 
@@ -132,7 +131,7 @@ h2 {
 
 h2 {
     width: 90%;
-    font-family: 'Caveat', cursive;
+    font-family: 'Kalam', cursive;
     border: 3.5px solid red;
     box-shadow: 0px 0px 20px 0px blue;
     font-size: 1em;
@@ -150,18 +149,6 @@ h2 {
     background-color: yellow;
     position: relative;
     animation: animaWord 1s linear infinite;
-}
-
-@keyframes animaWord {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 #word1::after {
