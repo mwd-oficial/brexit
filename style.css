@@ -1,0 +1,286 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'fonteRedonda';
+    src: url("junegull.ttf") format('truetype')
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-image: url("imagens/brexit-bandeira.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: cursive;
+    overflow-x: hidden;
+}
+
+#conteudo {
+    display: none;
+}
+
+#carregando {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#carregar {
+    background-color: transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid white;
+    border-right: 10px solid white;
+    border-left: 10px solid white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: preload .5s linear infinite;
+}
+
+#pcarregar {
+    color: white;
+    margin: 0;
+}
+
+@keyframes preload {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#divVideo {
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+video {
+    height: 100vh;
+}
+
+#feitoPor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+}
+
+h1,
+h2 {
+    background-color: white;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+    font-family: 'fonteRedonda', Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+h2 {
+    width: 90%;
+    font-family: cursive;
+    border: 3.5px solid red;
+    box-shadow: 0px 0px 20px 0px blue;
+    font-size: 1em;
+    margin: 50px auto;
+}
+
+#fh2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.word {
+    display: inline-block;
+    cursor: pointer;
+    background-color: yellow;
+    position: relative;
+    animation: animaWord 1s linear infinite;
+}
+
+@keyframes animaWord {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#word1::after {
+    background-image: url("imagens/uniao-europeia.jpg");
+}
+#word2::after {
+    background-image: url("imagens/brexit-icone.ico");
+}
+
+#btnAtalho {
+    background-color: white;
+    color: black;
+    width: 50px;
+    height: 50px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: none;
+    transition-duration: .5s;
+    transform: translate(0, 0) scale(1);
+    animation: none;
+}
+
+@keyframes animaBtnAtalho {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(0, 20px) scale(1.2);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+#scrool {
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100vw;
+    height: 50px;
+    background-color: transparent;
+}
+
+main {
+    margin: auto;
+    text-align: justify;
+    max-width: 95vw;
+    padding: 25px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    margin: 30px 0px;
+}
+
+#mapa,
+img {
+    background-color: #eee;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1);
+}
+
+img {
+    max-width: 80%;
+}
+
+footer {
+    padding: 30px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logodiv {
+    padding: 20px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+    transition-duration: .5s;
+    animation: animaLogo 1s linear infinite;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+@keyframes animaLogo {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#logo {
+    background-color: transparent;
+    max-width: 200px;
+    border-radius: 20px;
+    transition-duration: .5s;
+}
+
+#logodiv:hover {
+    transform: scale(1.1);
+}

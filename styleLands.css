@@ -1,0 +1,60 @@
+#feitoPor {
+    font-size: 16px;
+}
+
+main {
+    max-width: 75vw;
+    padding: 50px;
+}
+
+h2 {
+    width: initial;
+    font-size: 1.5em;
+}
+
+video {
+    height: initial;
+    width: 100vw;
+}
+
+.word {
+    animation: none;
+}
+
+.word::after {
+    content: "";
+    transition-duration: .5s;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 2;
+    opacity: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.word:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 250%;
+    height: 250px;
+    /* Ajuste a altura da pré-visualização conforme necessário */
+    z-index: 2;
+    opacity: 1;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+
+
+#logodiv {
+    animation: none;
+}
