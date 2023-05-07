@@ -5,8 +5,6 @@
     src: url("junegull.ttf") format('truetype')
 }
 
-
-
 * {
     padding: 0;
     margin: 0;
@@ -14,18 +12,33 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 100);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 0);
+    border-radius: 5000px;
 }
 
 html,
 body {
     height: 100vh;
     width: 100vw;
+    font-size: 16px;
 }
 
 html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+}
+
+html,body {
+    height: 100vh;
+    width: 100vw;
 }
 
 body {
@@ -41,6 +54,7 @@ body {
 #conteudo {
     display: none;
 }
+
 
 #carregando {
     position: absolute;
@@ -79,8 +93,11 @@ body {
         transform: rotate(360deg);
     }
 }
+.word {
+    background-color: yellow;
+}
 
-header {
+.headSec {
     height: 90vh;
     display: flex;
     justify-content: center;
@@ -115,6 +132,12 @@ video {
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     font-size: 12px;
+    padding: 5px;
+}
+
+#h12 {
+    margin: 20px;
+    font-size: 30px;
 }
 
 h1,
@@ -138,27 +161,15 @@ h2 {
     margin: 50px auto;
 }
 
-#fh2 {
-    margin-top: 0;
-    margin-bottom: 50px;
+h3 {
+    text-align: left;
 }
 
-.word {
-    display: inline-block;
-    cursor: pointer;
-    background-color: yellow;
-    position: relative;
-    animation: animaWord 1s linear infinite;
+#home {
+    display: none;
 }
 
-#word1::after {
-    background-image: url("imagens/uniao-europeia.jpg");
-}
-#word2::after {
-    background-image: url("imagens/brexit-icone.ico");
-}
-
-#btnAtalho {
+.btn {
     background-color: white;
     color: black;
     width: 50px;
@@ -191,11 +202,8 @@ h2 {
     }
 }
 
-#scrool {
-    position: absolute;
-    bottom: 10vh;
-    left: 50%;
-    transform: translate(-50%, 0);
+#scrool, #scrool2 {
+    position: relative;
     width: 100vw;
     height: 50px;
     background-color: transparent;
@@ -206,6 +214,7 @@ main {
     text-align: justify;
     max-width: 95vw;
     padding: 25px;
+    padding-top: 0;
     border-radius: 30px;
     background-color: white;
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);

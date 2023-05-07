@@ -2,9 +2,26 @@
     font-size: 16px;
 }
 
+#home {
+    display: flex;
+    position: sticky;
+    top: 87.5%;
+    left: 92.5%;
+}
+
+#home:hover {
+    transform: scale(1.1);
+}
+
 main {
     max-width: 75vw;
     padding: 50px;
+    padding-top: 0;
+}
+
+#h12 {
+    margin: 0;
+    font-size: 50px;
 }
 
 h2 {
@@ -23,8 +40,8 @@ video {
 
 .word::after {
     content: "";
-    transition-duration: .5s;
     display: block;
+    transition-duration: .2s;
     position: absolute;
     top: 100%;
     left: 0;
@@ -45,15 +62,71 @@ video {
     left: 50%;
     transform: translate(-50%,0);
     width: 250%;
-    height: 250px;
+    height: 200px;
     /* Ajuste a altura da pré-visualização conforme necessário */
     z-index: 2;
     opacity: 1;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
     border: 1px solid #cccccc;
     padding: 10px;
 }
 
+.word {
+    display: inline-block;
+    cursor: pointer;
+    background-color: yellow;
+    font-weight: bolder;
+    position: relative;
+}
+
+#wordImagem::after {
+    background-image: url("imagens/imagem.jpg");
+    width: 200px; 
+}
+#wordUe::after {
+    background-image: url("imagens/uniao-europeia.jpg");
+    width: 200px; 
+}
+#wordUk::after {
+    background-image: url("imagens/brexit-icone.ico");
+}
+#wordEuropa::after {
+    background-image: url("imagens/europa.jpg");
+    width: 200px; 
+}
+#wordLivro::after {
+    background-image: url("imagens/maastricht.JPG");
+    width: 300px; 
+}
+#wordUsmca::after {
+    background-image: url("imagens/usmca.jpg");
+    width: 200px; 
+}
+#wordMercosul::after {
+    background-image: url("imagens/mercosul.png");
+    width: 200px; 
+}
+#wordCedeao::after {
+    background-image: url("imagens/cedeao.png");
+    width: 200px; 
+}
+#wordAsean::after {
+    background-image: url("imagens/asean.jpg");
+    width: 200px; 
+}
+#wordLondres::after {
+    background-image: url("imagens/londres.jpg");
+    width: 200px;
+}
+#wordMay::after {
+    background-image: url("imagens/Theresa_May.jpg");
+}
+#wordBoris::after {
+    background-image: url("imagens/Boris_Johnson.jpg");
+}
+#wordGuerra::after {
+    background-image: url("imagens/guerra.jpg");
+}
 
 #logodiv {
     animation: none;
