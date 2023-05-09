@@ -6,8 +6,8 @@ img,
     display: none;
 }
 
-header {
-    height: 150px;
+.headSec {
+    height: 20vh;
 }
 
 #feitoPor {

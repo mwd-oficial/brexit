@@ -79,6 +79,11 @@ video {
     position: relative;
 }
 
+#wordEuro::after {
+    background-image: url("imagens/euroceticismo.png");
+    width: 200px; 
+}
+
 #wordImagem::after {
     background-image: url("imagens/imagem.jpg");
     width: 200px; 
@@ -116,6 +121,14 @@ video {
 }
 #wordLondres::after {
     background-image: url("imagens/londres.jpg");
+    width: 200px;
+}
+#wordFrank::after {
+    background-image: url("imagens/frankfurt.jpg");
+    width: 200px;
+}
+#wordParis::after {
+    background-image: url("imagens/paris.webp");
     width: 200px;
 }
 #wordMay::after {
